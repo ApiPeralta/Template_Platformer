@@ -8,6 +8,16 @@ TagManager:
   - Water
   - Target
   - Trampoline
+  - WayPoint
+  - Enemigo
+  - WayPoint2
+  - Enemigo2
+  - Enemigo3
+  - Enemigo4
+  - Enemigo5
+  - Enemigo6
+  - Enemigo7
+  - Sword
   layers:
   - Default
   - TransparentFX

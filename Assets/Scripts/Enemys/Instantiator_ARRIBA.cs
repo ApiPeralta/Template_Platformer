@@ -1,10 +1,12 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class Enemy_Instantiator : MonoBehaviour
+public class Instantiator_ARRIBA : MonoBehaviour
 {
-    public List<GameObject> enemies;
+    public GameObject enemy;
     public GameObject instantiatePos;
     public float respawningTimer;
 
@@ -19,13 +21,13 @@ public class Enemy_Instantiator : MonoBehaviour
     {
         SpawnEnemies();
     }
-    private void SpawnEnemies()                                
+    private void SpawnEnemies()
     {
         respawningTimer -= Time.deltaTime;
         if (respawningTimer <= 0)
         {
-            Instantiate(enemies[GameManager.actualPlayer], instantiatePos.transform);           
-            respawningTimer = UnityEngine.Random.Range(12, 15);
+            Instantiate(enemy, instantiatePos.transform);
+            respawningTimer = UnityEngine.Random.Range(3,5);
         }
     }
 }
